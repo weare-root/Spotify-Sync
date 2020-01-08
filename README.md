@@ -6,6 +6,6 @@ Building an App which you can use to hear Spotify Music together
   - [ ] Username
   - [ ] Login
   - [ ] Friends?
--[ ] Buisness Layer
-  -[ ] Spotify API
-  -[ ] Login etc..
+- [ ] Buisness Layer
+  - [ ] Spotify API
+  - [ ] Login etc..
