@@ -13,14 +13,15 @@ import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String CLIENT_ID = "your_client_id";
-    private static final String REDIRECT_URI = "http://at.wunderwuzis.spotify_sync/callback";
+    private static final String CLIENT_ID = "8369c33ef7bf451296f570cc22880286";
+    private static final String REDIRECT_URI = "https://example.com/callback/";
     private SpotifyAppRemote mSpotifyAppRemote;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        onStart();
     }
 
     @Override
