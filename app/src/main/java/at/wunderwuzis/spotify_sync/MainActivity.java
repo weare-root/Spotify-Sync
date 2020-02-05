@@ -14,44 +14,57 @@ import android.util.Log;
 public class MainActivity extends AppCompatActivity {
 
     private static final String CLIENT_ID = "8369c33ef7bf451296f570cc22880286";
-    private static final String REDIRECT_URI = "https://example.com/callback/";
+    private static final String REDIRECT_URI = "spotifysync://callback";
     private SpotifyAppRemote mSpotifyAppRemote;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        onStart();
+
+        
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        ConnectionParams connectionParams =
-                new ConnectionParams.Builder(CLIENT_ID)
-                        .setRedirectUri(REDIRECT_URI)
-                        .showAuthView(true)
-                        .build();
-        SpotifyAppRemote.connect(this, connectionParams,
-                new Connector.ConnectionListener() {
-                    @Override
-                    public void onConnected(SpotifyAppRemote spotifyAppRemote) {
-                        mSpotifyAppRemote = spotifyAppRemote;
-                        Log.d("MainActivity", "Connected! Yay!");
+        try {
 
-                        // Now you can start interacting with App Remote
-                        connected();
-                    }
-                    @Override
-                    public void onFailure(Throwable throwable) {
-                        Log.e("MainActivity", throwable.getMessage(), throwable);
+            ConnectionParams connectionParams =
+                    new ConnectionParams.Builder(CLIENT_ID)
+                            .setRedirectUri(REDIRECT_URI)
+                            .showAuthView(true)
+                            .build();
+            SpotifyAppRemote.connect(this, connectionParams,
+                    new Connector.ConnectionListener() {
+                        @Override
+                        public void onConnected(SpotifyAppRemote spotifyAppRemote) {
+                            mSpotifyAppRemote = spotifyAppRemote;
+                            Log.d("MainActivity", "Connected! Yay!");
 
-                        // Something went wrong when attempting to connect! Handle errors here
-                    }
-                });
+                            // Now you can start interacting with App Remote
+                            connected();
+                        }
+                        @Override
+                        public void onFailure(Throwable throwable) {
+                            Log.e("MainActivity", throwable.getMessage(), throwable);
+                            Log.e("main", "neger");
+                            // Something went wrong when attempting to connect! Handle errors here
+                        }
+                    });
+        } catch(Exception e) {
+            Log.e("main", "onstart");
+        }
     }
     private void connected() {
-        mSpotifyAppRemote.getPlayerApi().play("spotify:playlist:37i9dQZF1DX2sUQwD7tbmL");
+        try {
+            //https://open.spotify.com/album/24hHNi75352fzhqiorank2?si=WuU611FgRx-hU-uL-IKaGg
+            //spotify:playlist:4uSQULxDEPuyc26RDiX9sb
+            mSpotifyAppRemote.getPlayerApi().play("spotify:playlist:4uSQULxDEPuyc26RDiX9sb");
+
+        } catch(Exception e) {
+            Log.e("main", "neger");
+        }
     }
 
     @Override
