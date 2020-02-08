@@ -29,7 +29,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15sp"
@@ -40,7 +40,7 @@
             android:textColor="#2C2F33" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15sp"
@@ -58,7 +58,7 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/tv_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15sp"
@@ -70,7 +70,7 @@
             android:textColorHint="#7289DA" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15sp"
@@ -82,7 +82,7 @@
             android:textColorHint="#7289DA" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btn_submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15sp"
