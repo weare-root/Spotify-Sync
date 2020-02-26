@@ -36,16 +36,10 @@ public class MainActivity extends AppCompatActivity {
 //        btn_register.setOnClickListener(sc);
         //</editor-fold>
 
-        btSubmit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String username = etUsername.getText().toString();
-                Editable password = etPassword.getText();
-                login(username, password);
-
-                Intent intent = new Intent(getApplicationContext(), LoggedIn.class);
-                startActivity(intent);
-            }
+        btSubmit.setOnClickListener(v -> {
+            String username = etUsername.getText().toString();
+            Editable password = etPassword.getText();
+            login(username, password);
         });
 
     }

@@ -68,7 +68,8 @@
             android:background="@drawable/border_radius"
             android:text="@string/login"
             android:textAlignment="center"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
