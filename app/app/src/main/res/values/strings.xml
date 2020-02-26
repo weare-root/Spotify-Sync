@@ -5,4 +5,10 @@
     <string name="register">Register</string>
     <string name="username">username</string>
     <string name="password">password</string>
+    <!--  first one: song name; 2nd: artist; 3rd: Album  -->
+    <string name="song">%s - %s (%s)</string>
+    <string name="title_activity_logged_in">LoggedIn</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

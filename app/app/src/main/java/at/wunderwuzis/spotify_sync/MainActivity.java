@@ -6,22 +6,22 @@ import com.spotify.android.appremote.api.ConnectionParams;
 import com.spotify.android.appremote.api.Connector;
 import com.spotify.android.appremote.api.SpotifyAppRemote;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String CLIENT_ID = "8369c33ef7bf451296f570cc22880286";
     private static final String REDIRECT_URI = "spotifysync://callback";
     private SpotifyAppRemote mSpotifyAppRemote;
+
+    private Button btSubmit, btSecondary;
+    private EditText etUsername, etPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,39 +31,41 @@ public class MainActivity extends AppCompatActivity {
         init();
 
         //<editor-fold desc="Swap Click">
-        SwapClick sc = new SwapClick();
-        btn_login.setOnClickListener(sc);
-        btn_register.setOnClickListener(sc);
+//        SwapClick sc = new SwapClick();
+//        btn_login.setOnClickListener(sc);
+//        btn_register.setOnClickListener(sc);
         //</editor-fold>
 
-        btn_submit.setOnClickListener(new View.OnClickListener() {
+        btSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String username = (String) tv_username.getText();
-                Editable password = et_password.getText();
+                String username = etUsername.getText().toString();
+                Editable password = etPassword.getText();
                 login(username, password);
+
+                Intent intent = new Intent(getApplicationContext(), LoggedIn.class);
+                startActivity(intent);
             }
         });
 
     }
 
     public boolean login(String username, Editable password) {
-        if (users.containsKey(username)) {
-            if (password.equals(users.get(username))) {
-                return true;
-            } else {
-                return false;
-            }
-        }
+//        if (users.containsKey(username)) {
+//            if (password.equals(users.get(username))) {
+//                return true;
+//            } else {
+//                return false;
+//            }
+//        }
         return false;
     }
 
     public void init() {
-        btn_submit = findViewById(R.id.btnSubmit);
-        btn_login = findViewById(R.id.btn_login);
-        btn_register = findViewById(R.id.btn_register);
-
+        btSubmit = findViewById(R.id.btSubmit);
+        btSecondary = findViewById(R.id.btSecondary);
+        etPassword = findViewById(R.id.etPassword);
+        etUsername = findViewById(R.id.etUsername);
     }
 
     @Override

@@ -19,6 +19,7 @@
         <item name="android:windowBackground">@color/background</item>
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textColorPrimary">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/lineto</item>
     </style>
 
 </resources>
