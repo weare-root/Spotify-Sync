@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#dadada</color>
+    <color name="colorPrimary">@color/spotify_white</color>
     <color name="colorPrimaryDark">#bababa</color>
     <color name="colorAccent">#0a0a0a</color>
+    <color name="background">#191414</color>
+
+<!--    https://developer.spotify.com/branding-guidelines/ -->
+    <color name="spotify_green">@color/background</color>
+    <color name="spotify_white">#FFF</color>
+    <color name="spotify_black">#191414</color>
 </resources>

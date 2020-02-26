@@ -1,4 +1,5 @@
 package at.wunderwuzis.spotify_sync;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.spotify.android.appremote.api.ConnectionParams;
@@ -52,26 +53,25 @@ public class MainActivity extends AppCompatActivity {
 
                 String username = (String) tv_username.getText();
                 Editable password = et_password.getText();
-                login(username,password);
+                login(username, password);
             }
         });
 
     }
 
-    public boolean login(String username, Editable password) throws Exception{
-        if(users.containsKey(username)) {
-            if( password.equals(users.get(username)) ) {
+    public boolean login(String username, Editable password) {
+        if (users.containsKey(username)) {
+            if (password.equals(users.get(username))) {
                 return true;
-            }
-            else {
+            } else {
                 return false;
             }
         }
-        return new Exception();
+        return false;
     }
 
-    public void init(){
-        btn_submit = findViewById(R.id.btn_submit);
+    public void init() {
+        btn_submit = findViewById(R.id.btnSubmit);
         btn_login = findViewById(R.id.btn_login);
         btn_register = findViewById(R.id.btn_register);
 
@@ -83,7 +83,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         try {
-
             ConnectionParams connectionParams =
                     new ConnectionParams.Builder(CLIENT_ID)
                             .setRedirectUri(REDIRECT_URI)
@@ -99,25 +98,27 @@ public class MainActivity extends AppCompatActivity {
                             // Now you can start interacting with App Remote
                             connected();
                         }
+
                         @Override
                         public void onFailure(Throwable throwable) {
                             Log.e("MainActivity", throwable.getMessage(), throwable);
-                            Log.e("main", "neger");
+                            Log.e("main", "failure");
                             // Something went wrong when attempting to connect! Handle errors here
                         }
                     });
-        } catch(Exception e) {
+        } catch (Exception e) {
             Log.e("main", "onstart");
         }
     }
+
     private void connected() {
         try {
             //https://open.spotify.com/album/24hHNi75352fzhqiorank2?si=WuU611FgRx-hU-uL-IKaGg
             //spotify:playlist:4uSQULxDEPuyc26RDiX9sb
-            mSpotifyAppRemote.getPlayerApi().play("spotify:playlist:4uSQULxDEPuyc26RDiX9sb");
+//            mSpotifyAppRemote.getPlayerApi().play("spotify:playlist:4uSQULxDEPuyc26RDiX9sb");
 
-        } catch(Exception e) {
-            Log.e("main", "neger");
+        } catch (Exception e) {
+            Log.e("main", "connected");
         }
     }
 
@@ -127,14 +128,10 @@ public class MainActivity extends AppCompatActivity {
         SpotifyAppRemote.disconnect(mSpotifyAppRemote);
     }
 
-    private class SwapClick implements View.OnClickListener{
+    private class SwapClick implements View.OnClickListener {
         @Override
         public void onClick(View v) {
-            if( v.getId() == btn_login.getId() ) {
 
-            }
-            else {
-
-            }
+        }
     }
 }
