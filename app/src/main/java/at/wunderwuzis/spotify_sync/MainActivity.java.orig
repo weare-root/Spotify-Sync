@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         init();
+<<<<<<< HEAD
 
         //<editor-fold desc="Swap Click">
         SwapClick sc = new SwapClick();
@@ -63,6 +64,13 @@ public class MainActivity extends AppCompatActivity {
         btn_submit = findViewById(R.id.btnSubmit);
         btn_login = findViewById(R.id.btn_login);
         btn_register = findViewById(R.id.btn_register);
+=======
+    }
+
+
+
+    public void init(){
+>>>>>>> 1a91f28b18b3f23eaf136be178bc6f618ba1b7fa
 
     }
 
@@ -114,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
         SpotifyAppRemote.disconnect(mSpotifyAppRemote);
     }
+<<<<<<< HEAD
 
     private class SwapClick implements View.OnClickListener {
         @Override
@@ -121,4 +130,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+=======
+>>>>>>> 1a91f28b18b3f23eaf136be178bc6f618ba1b7fa
 }
