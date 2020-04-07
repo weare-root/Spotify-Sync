@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">@color/spotify_white</color>
-    <color name="colorPrimaryDark">#bababa</color>
-    <color name="colorAccent">#0a0a0a</color>
-    <color name="background">@color/black</color>
-
-<!--    https://developer.spotify.com/branding-guidelines/ -->
-    <color name="spotify_green">#1DB954</color>
-    <color name="spotify_white">#FFF</color>
-    <color name="black">#2C2424</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
 </resources>
