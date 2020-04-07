@@ -4,6 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Spotify Sync.iml" filepath="$PROJECT_DIR$/Spotify Sync.iml" group="Spotify Sync" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Spotify Sync/app" />
+      <module fileurl="file://$PROJECT_DIR$/app-Spotify Sync.iml" filepath="$PROJECT_DIR$/app-Spotify Sync.iml" group="Spotify Sync" />
+      <module fileurl="file://$PROJECT_DIR$/app/app-app.iml" filepath="$PROJECT_DIR$/app/app-app.iml" group="Spotify Sync/app" />
+      <module fileurl="file://$PROJECT_DIR$/spotify-app-remote-release-0.7.0/app-spotify-app-remote-release-0.7.0.iml" filepath="$PROJECT_DIR$/spotify-app-remote-release-0.7.0/app-spotify-app-remote-release-0.7.0.iml" group="Spotify Sync/spotify-app-remote-release-0.7.0" />
+      <module fileurl="file://$PROJECT_DIR$/spotify-auth-release-1.2.3/app-spotify-auth-release-1.2.3.iml" filepath="$PROJECT_DIR$/spotify-auth-release-1.2.3/app-spotify-auth-release-1.2.3.iml" group="Spotify Sync/spotify-auth-release-1.2.3" />
       <module fileurl="file://$PROJECT_DIR$/spotify-app-remote-release-0.7.0/spotify-app-remote-release-0.7.0.iml" filepath="$PROJECT_DIR$/spotify-app-remote-release-0.7.0/spotify-app-remote-release-0.7.0.iml" group="Spotify Sync/spotify-app-remote-release-0.7.0" />
       <module fileurl="file://$PROJECT_DIR$/spotify-auth-release-1.2.3/spotify-auth-release-1.2.3.iml" filepath="$PROJECT_DIR$/spotify-auth-release-1.2.3/spotify-auth-release-1.2.3.iml" group="Spotify Sync/spotify-auth-release-1.2.3" />
     </modules>
